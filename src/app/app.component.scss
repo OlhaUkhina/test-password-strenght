@@ -1,0 +1,62 @@
+.password-box {
+
+    margin: 20px;
+    max-width: 200px;
+
+
+    input {
+
+        width: 200px;
+        height: 21px;
+        border-radius: 1px solid #808080;
+    }
+
+    .line {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 200px;
+        margin: 5px;
+
+        &.invalid {
+            .block {
+                background-color: red;
+            }
+        }
+
+        &.esay {
+            .block {
+                background-color: red;
+
+                +.block {
+                    background-color: #808080;
+                }
+            }
+        }
+        &.medium{
+            .block{
+                background-color: #ffe101;
+                +.block{
+                    background-color: #ffe101;
+                    +.block{
+                        background-color: #808080;
+                    }
+                }
+            }
+        }
+        &.strong{          
+            .block{
+                background-color: green;             
+            }
+        }
+    }
+
+
+    .block {
+
+        height: 8px;
+        width: 50px;
+        background-color: #808080;
+    }
+}
